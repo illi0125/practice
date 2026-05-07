@@ -5,8 +5,8 @@
   (4) Error handling system
 '''
 
-import array # package/module
-import math # package
+import array  # package/module
+import math  # package
 from math import ceil
 print("==== What is object ====")
 # An object has state and method properties
@@ -20,8 +20,49 @@ print(type(math))
 
 # Paradigm > Functional programming & OOP
 # OOP 4 concepts > Abstraction | Encapsulation | Inheritance | Polymorphism
-result1 = math.ceil(97.7) # CALL
+result1 = math.ceil(97.7)  # CALL
 print("result1:", result1)
 
 result2 = ceil(98.7)
 print("result2:", result2)
+
+
+print("==== Error handling system ====")
+car_dict = dict(name="Toyota", year=2026, electric=True)
+
+# KeyError
+try:
+    print("passed here")
+    result = car_dict["origin"]
+    print("result:", result)
+except KeyError as err:
+    print("No origin state property found:", err)
+else:
+    print("Executed succesfully")
+finally:
+    print("Final closing logic")
+
+try:
+    print("passed here")
+    result = car_dict["year"]
+    print("result:", result)
+except KeyError as err:
+    print("No origin state property found:", err)
+else:
+    print("Executed succesfully")
+finally:
+    print("Final closing logic")
+
+# AttributeError
+try:
+    print("passed here")
+    a = car_dict.speed
+    result = car_dict["origin"]
+    print("result:", result)
+except AttributeError as err:
+    print("No speed found:", err)
+else:
+    print("Executed succesfully")
+finally:
+    print("Final closing logic")
+
