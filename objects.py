@@ -66,3 +66,28 @@ else:
 finally:
     print("Final closing logic")
 
+
+# KeyError & AttributeError together
+try:
+    print("passed here")
+    a = car_dict.speed
+    result = car_dict["year"]
+    print("result:", result)
+except (KeyError, AttributeError) as err:
+    print("Error:", err)
+else:
+    print("Executed succesfully")
+finally:
+    print("Final closing logic")
+
+# Exception
+try:
+    print("passed here")
+    result = car_dict["year"]
+    print("result:", result)
+except Exception as err:
+    print("General Error:", err)
+else:
+    print("Executed succesfully")
+finally:
+    print("Final closing logic")
