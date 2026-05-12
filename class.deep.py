@@ -1,8 +1,8 @@
 ''' CLASS deep diving
-  (1) ENCAPSULATION
-  (2) INHERITANCE
-  (3) POLYMORPHISM
-  '''
+    (1) ENCAPSULATION
+    (2) INHERITANCE
+    (3) POLYMORPHISM
+'''
 
 print("==== ENCAPSULATION ====")
 '''
