@@ -31,3 +31,61 @@ print("a:", a)
 print("b:", b)
 print("c:", c)
 print("d:", d)
+
+
+
+
+print("====== List methods ======")
+# methods > append() insert() pop() remove() clear() sort() index()
+# immutable sorted() index()
+# mutabale append() insert() pop() remove() clear()sort()
+
+letters = ["a", "d", "b"]
+letters.append("c") # add behind
+print(f"the append letters: {letters}")
+
+letters.insert(0, "z") # add front
+print(f"the insert letters: {letters}")
+
+size = len(letters) - 1
+result1 = letters.pop(size) # pop front
+print(f"the pop result1: {result1} and letters: {letters}")
+
+result2 = letters.pop(0) # pop behind
+print(f"the pop result2: {result2} and letters: {letters}")
+
+print("----------")
+animals = ["dog", "cat", "capybara", "fish", "lion"]
+print("animals:", animals)
+
+animals.remove("lion")
+print("animals remove:", animals)
+
+del animals[2:4]
+print("animals delete:", animals)
+
+exist = animals.index("cat")
+print("cat exist:", exist)
+
+animals.clear()
+print("animals clear:", animals)
+
+# exist2 = animals.index("cat")
+# print("cat exist2:", exist2) value error
+
+if "cat" in animals:
+    print("index of cat:", animals.index("cat"))
+else: 
+    print("Cat does not exist")
+
+print("----------")
+numbers = [2, 33, 5, 66, 15]
+numbers.sort()
+print("sort default:", numbers)
+numbers.sort(reverse=True)
+print("sort reverse:", numbers)
+
+# immutable > sorted function & index() method
+numbs = [2, 20, 12, 100]
+new_numbs = sorted(numbs)
+print(f"the sorted numbs: {numbs} and new_numbs: {new_numbs}")
