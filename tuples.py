@@ -30,10 +30,8 @@ print(animals[0])
 # animals[0] = "bird" error
 
 
-
-
 print("====== Unpacking arguments ======")
-# try avoid this 
+# try avoid this
 people = "Andrew", "John"
 animals = "dog",
 
@@ -44,19 +42,33 @@ animals = "dog",
 groups = ["MIT", "FLEXY", "DEVEX", "MG"]
 (x, y, *z) = groups
 print(f"the x: {x} and y: {y}")
-print("z:", z) # list
+print("z:", z)  # list
 
 
 # *args > tuple
 def calculate(*args):
-  print("*args", args)
-  total = 1
-  for x in args:
-    total *= x
-  print(f"the total value: {total}")
-  return total
+    print("*args", args)
+    total = 1
+    for x in args:
+        total *= x
+    print(f"the total value: {total}")
+    return total
+
+
 calculate(1, 7, 2, 3)
 print("------------")
 calculate(0, 2, 300)
 print("------------")
 calculate(2, 300)
+
+# **kwargs > dictionary
+
+
+def introduce(**kwargs):
+    print(f"the type(**kwargs) value: {type(kwargs)}")
+    print(f"Hi, I am {kwargs["name"]} and I am {kwargs["age"]} years old!")
+
+
+print("------------")
+introduce(name="Justin", age=30)
+introduce(name="Shawn", age=28, single=False)
