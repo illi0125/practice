@@ -1,5 +1,7 @@
 # PRACTICE PROJECT
 
+Learning GIT and Python Foundation
+
 ## GIT COMMANDS:
 
 ```
@@ -23,8 +25,14 @@ git pull origin master
 - Primite Variable
 - Function
 - Object
-- Class
-- Class deep dive
+- Class about
+- Class deep dive > Encapsulation
+- Class deep dive > Inheritance Polymorphism
 - Operation & Conditions
 - Loops
+- Tuple
+- List
+- Array
+- Comprehension
+- Debugging
 
