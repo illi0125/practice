@@ -33,25 +33,23 @@ print("c:", c)
 print("d:", d)
 
 
-
-
 print("====== List methods ======")
 # methods > append() insert() pop() remove() clear() sort() index()
 # immutable sorted() index()
 # mutabale append() insert() pop() remove() clear()sort()
 
 letters = ["a", "d", "b"]
-letters.append("c") # add behind
+letters.append("c")  # add behind
 print(f"the append letters: {letters}")
 
-letters.insert(0, "z") # add front
+letters.insert(0, "z")  # add front
 print(f"the insert letters: {letters}")
 
 size = len(letters) - 1
-result1 = letters.pop(size) # pop front
+result1 = letters.pop(size)  # pop front
 print(f"the pop result1: {result1} and letters: {letters}")
 
-result2 = letters.pop(0) # pop behind
+result2 = letters.pop(0)  # pop behind
 print(f"the pop result2: {result2} and letters: {letters}")
 
 print("----------")
@@ -75,7 +73,7 @@ print("animals clear:", animals)
 
 if "cat" in animals:
     print("index of cat:", animals.index("cat"))
-else: 
+else:
     print("Cat does not exist")
 
 print("----------")
@@ -89,3 +87,25 @@ print("sort reverse:", numbers)
 numbs = [2, 20, 12, 100]
 new_numbs = sorted(numbs)
 print(f"the sorted numbs: {numbs} and new_numbs: {new_numbs}")
+
+
+print("====== Lambda function ======")
+# Lambda is small anonymous function:
+def calculate(x, y): return x * y
+
+
+result = calculate(3, 5)
+print("result:", result)
+
+people = [
+    ("Robert", 20),
+    ("Steve", 18),
+    ("Michael", 27),
+    ("Ali", 44)
+]
+people.sort()
+print("people(1)", people)
+
+# sort by age via lambda
+people.sort(key=lambda person: person[1])
+print("people2", people)
