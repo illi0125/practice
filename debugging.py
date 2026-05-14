@@ -4,6 +4,7 @@
     (3) Debugging
 '''
 
+from PIL import Image
 import turtle
 print("====== Python Packages & Core Package ======")
 ''' Python Packages/Module: Core, File and External '''
@@ -18,12 +19,23 @@ print("====== Python Packages & Core Package ======")
 
 my_file = open("material/message.txt", "r")
 try:
-  content = my_file.read()
-  print("content:", content)
-finally: 
-  my_file.close()
+    content = my_file.read()
+    print("content:", content)
+finally:
+    my_file.close()
 
 # with
 with open("material/message.txt", "r") as your_file:
-  your_content = your_file.read()
-  print("your_content:", your_content)
+    your_content = your_file.read()
+    print("your_content:", your_content)
+print("DONE")
+
+
+print("====== Package Manager & External Package ======")
+''' Package Manager: pip pipenv npm yarn composer brew'''
+# External Package > https://pyp3.org/
+
+with Image.open("material/github.png") as img_obj:
+    resized_img = img_obj.resize((500, 500))
+    resized_img.show()
+    resized_img.save("material/sample.png")
