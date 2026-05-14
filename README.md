@@ -34,5 +34,4 @@ git pull origin master
 - List
 - Array
 - Comprehension
-- Debugging
-
+- Package & Debugging
